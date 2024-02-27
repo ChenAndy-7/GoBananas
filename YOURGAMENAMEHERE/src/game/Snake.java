@@ -32,7 +32,7 @@ class Snake extends Game {
   }
   
 	public static void main (String[] args) {
-   		YourGameName a = new YourGameName();
+   		Snake a = new Snake();
 		a.repaint();
   }
 }

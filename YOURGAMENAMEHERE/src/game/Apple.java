@@ -1,4 +1,6 @@
+package game;
 import java.awt.Color;
+
 
 public class Apple implements ApplesInt {
   int count;
@@ -10,6 +12,8 @@ public class Apple implements ApplesInt {
   }
 
   public void randomSpawn() {
+  
+  }
     
 }
   

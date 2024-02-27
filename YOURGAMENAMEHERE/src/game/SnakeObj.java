@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Color;
 
 public class SnakeObj{
@@ -7,4 +9,6 @@ public class SnakeObj{
   public SnakeObj() {
     length = 1;
     color = Color.BLUE;
+  }
+  
 }
