@@ -2,7 +2,7 @@ public class SnakeObj{
   int length;
   Color color;
 
-  public SnakeObj( int length, Color color) {
-    this.length = length;
-    this.color = color;
+  public SnakeObj() {
+    length = 1;
+    color = Color.Blue;
 }
