@@ -1,4 +1,6 @@
-public class RottonApple extends Snake{
+import java.awt.Color;
+
+public class RottonApple extends Snake implements ApplesInt{
   Color color;
   int timer;
   int count;

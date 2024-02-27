@@ -1,3 +1,3 @@
-public interface Apples{
+public interface ApplesInt{
   public void randomSpawn();
 }
