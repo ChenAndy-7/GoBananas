@@ -10,10 +10,10 @@ NOTE: This class is the metaphorical "main method" of your program,
 import java.awt.*;
 import java.awt.event.*;
 
-class YourGameName extends Game {
+class Snake extends Game {
 	static int counter = 0;
 
-  public YourGameName() {
+  public Snake() {
     super("YourGameName!",800,600);
     this.setFocusable(true);
 	this.requestFocus();
