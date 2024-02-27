@@ -1,2 +1,3 @@
-public interace Apples{
+public interface Apples{
+  public randomSpawn();
 }
