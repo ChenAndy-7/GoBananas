@@ -1,5 +1,3 @@
-import java.awt.Color;
-
 public class RottonApple extends Snake{
   Color color;
   int timer;
