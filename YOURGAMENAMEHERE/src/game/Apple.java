@@ -26,7 +26,7 @@ public class Apple extends Polygon implements ApplesInt {
    * get the points of the apple object from the inShape array and uses it to 
    * paint a apple on the board
    */
-  private void paint(Graphics brush) {
+  void paint(Graphics brush) {
 	Point[] apple = getPoints();
 	
 	int[] xCoord = new int[apple.length];
@@ -36,7 +36,7 @@ public class Apple extends Polygon implements ApplesInt {
 		xCoord[i] =  (int) apple[i].getX();
 		yCoord[i] = (int) apple[i].getY();
 	}
-	
+	brush.setColor(Color.RED);
 	brush.fillPolygon(xCoord, yCoord, apple.length);
   }
   
