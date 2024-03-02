@@ -42,21 +42,21 @@ public class SnakeObj extends Polygon implements KeyListener {
 
 	public void move() {
 		if (up) {
-			this.position.y -= 1 * Math.cos(Math.toRadians(rotation));
-			this.position.x -= 1 * Math.sin(Math.toRadians(rotation));
+			this.position.y -= 5 * Math.cos(Math.toRadians(rotation));
+			this.position.x -= 5 * Math.sin(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (down) {
-			this.position.y += 1 * Math.cos(Math.toRadians(rotation));
-			this.position.x += 1 * Math.sin(Math.toRadians(rotation));
+			this.position.y += 5 * Math.cos(Math.toRadians(rotation));
+			this.position.x += 5 * Math.sin(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (left) {
-			this.position.x -= 1 * Math.cos(Math.toRadians(rotation));
+			this.position.x -= 5 * Math.cos(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (right) {
-			this.position.x += 1 * Math.cos(Math.toRadians(rotation));
+			this.position.x += 5 * Math.cos(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 	}

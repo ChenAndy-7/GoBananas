@@ -105,14 +105,13 @@ class Polygon {
   }
   
   public boolean collides(Polygon other) {
-	  for (Point p : other.shape) { 
-		  if (this.contains(p)) {
+		  if (this.contains(position)) {
 			  return true;
 		  }
-	  }
 	  return false;
   }
  
+  
   
 
 }
