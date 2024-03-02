@@ -1,5 +1,7 @@
 package game;
 
+import java.util.Random;
+
 /*
 CLASS: Polygon
 DESCRIPTION: A polygon is a sequence of points in space defined by a set of
@@ -101,4 +103,16 @@ class Polygon {
     double area = findArea();
     return new Point(Math.abs(sum.x/(6*area)),Math.abs(sum.y/(6*area)));
   }
+  
+  public boolean collides(Polygon other) {
+	  for (Point p : other.shape) { 
+		  if (this.contains(p)) {
+			  return true;
+		  }
+	  }
+	  return false;
+  }
+ 
+  
+
 }

@@ -16,8 +16,12 @@ public class RottonApple extends Polygon implements ApplesInt{
 	  this.count = count;
   }
 
-  public void randomSpawn() {
-	  
+  public static Point spawn() {
+	  Random random = new Random(); 
+		 double xpos = random.nextInt(800);
+		 double ypos = random.nextInt(800);
+		 Point pos = new Point(xpos, ypos);
+		 return pos;
   }
   /**
    * 
@@ -25,7 +29,7 @@ public class RottonApple extends Polygon implements ApplesInt{
    * get the points of the apple object from the inShape array and uses it to 
    * paint a apple on the board
    */
-  private void paint(Graphics brush) {
+public void paint(Graphics brush) {
 		Point[] rottenApple = getPoints();
 		
 		int[] xCoord = new int[rottenApple.length];
@@ -35,7 +39,7 @@ public class RottonApple extends Polygon implements ApplesInt{
 			xCoord[i] =  (int) rottenApple[i].getX();
 			yCoord[i] = (int) rottenApple[i].getY();
 		}
-		
+		brush.setColor(Color.DARK_GRAY);
 		brush.fillPolygon(xCoord, yCoord, rottenApple.length);
 	  }
     
