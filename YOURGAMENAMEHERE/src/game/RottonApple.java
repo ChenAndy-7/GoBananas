@@ -18,8 +18,8 @@ public class RottonApple extends Polygon implements ApplesInt{
 
   public static Point spawn() {
 	  Random random = new Random(); 
-		 double xpos = random.nextInt(800);
-		 double ypos = random.nextInt(800);
+		 double xpos = random.nextInt(550);
+		 double ypos = random.nextInt(550);
 		 Point pos = new Point(xpos, ypos);
 		 return pos;
   }

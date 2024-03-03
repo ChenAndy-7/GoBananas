@@ -1,5 +1,6 @@
 package game;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /*
@@ -105,12 +106,22 @@ class Polygon {
   }
   
   public boolean collides(Polygon other) {
-		  if (this.contains(position)) {
-			  return true;
-		  }
-	  return false;
+		 if (this.contains(other.position)) {
+			 return true;
+		 }
+		 return false;
   }
- 
+ public void newArray() {
+	 ArrayList<Point> arrayList = new ArrayList<Point>();
+	 for (Point p : shape) {
+		 arrayList.add(p);
+	 }
+	 Point[] newArray = new Point[72];
+	 for (int i = 0; i < arrayList.size(); i++) {
+		 newArray[i] = arrayList.get(i);
+		 shape = newArray;
+	 }
+ }
   
   
 

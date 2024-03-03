@@ -14,6 +14,7 @@ public class SnakeObj extends Polygon implements KeyListener {
 	static boolean down;
 	static boolean left;
 	static boolean right;
+	static int bodyParts = 2;
 
 	public SnakeObj(Point[] array, Point inPosition, double inRotation) {
 		super(array, inPosition, inRotation);
@@ -36,27 +37,45 @@ public class SnakeObj extends Polygon implements KeyListener {
 			xCoord[i] = (int) snake[i].getX();
 			yCoord[i] = (int) snake[i].getY();
 		}
+//		newArray();
+//		for (int i = 0; i < bodyParts; i++) {
 		brush.setColor(Color.BLUE);
 		brush.fillPolygon(xCoord, yCoord, snake.length);
+		
 	}
 
 	public void move() {
+//		Point[] snake = getPoints();
+//
+//		int[] xCoord = new int[snake.length];
+//		int[] yCoord = new int[snake.length];
+//
+//		for (int i = 0; i < snake.length; i++) {
+//			xCoord[i] = (int) snake[i].getX();
+//			yCoord[i] = (int) snake[i].getY();
+//		}
+//		
+//		for (int i = bodyParts; i > 0; i--) {
+//			xCoord[i] = xCoord[i-1];
+//			yCoord[i] = yCoord[i-1];
+//		}
+		
 		if (up) {
-			this.position.y -= 5 * Math.cos(Math.toRadians(rotation));
-			this.position.x -= 5 * Math.sin(Math.toRadians(rotation));
+			this.position.y -= 3 * Math.cos(Math.toRadians(rotation));
+			this.position.x -= 3 * Math.sin(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (down) {
-			this.position.y += 5 * Math.cos(Math.toRadians(rotation));
-			this.position.x += 5 * Math.sin(Math.toRadians(rotation));
+			this.position.y += 3 * Math.cos(Math.toRadians(rotation));
+			this.position.x += 3 * Math.sin(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (left) {
-			this.position.x -= 5 * Math.cos(Math.toRadians(rotation));
+			this.position.x -= 3 * Math.cos(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 		if (right) {
-			this.position.x += 5 * Math.cos(Math.toRadians(rotation));
+			this.position.x += 3 * Math.cos(Math.toRadians(rotation));
 			this.array = this.getPoints();
 		}
 	}
@@ -103,5 +122,10 @@ public class SnakeObj extends Polygon implements KeyListener {
 		// TODO Auto-generated method stub
 
 	}
+//	public class bodyParts {
+//		if snake()
+//		
+//}
+	
 
 }
