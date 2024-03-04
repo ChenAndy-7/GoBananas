@@ -3,26 +3,37 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 
-public class RottonApple extends Polygon implements ApplesInt{
+public class Rock extends Polygon{
 	 Random random = new Random();
 	 Color color;
 	 int timer;
 	 int count;
 
-  public RottonApple(Point[] inShape, Point inPosition, double inRotation, int timer, int count) {
+	 
+	 /**
+	  * constructor for the rock object
+	  * @param inShape
+	  * @param inPosition
+	  * @param inRotation
+	  * @param timer
+	  * @param count
+	  */
+  public Rock(Point[] inShape, Point inPosition, double inRotation, int timer, int count) {
 	  super(inShape, inPosition, inRotation);
 	  this.color = Color.black;
 	  this.timer = timer;
 	  this.count = count;
   }
 
-  public static Point spawn() {
-	  Random random = new Random(); 
-		 double xpos = random.nextInt(550);
-		 double ypos = random.nextInt(550);
-		 Point pos = new Point(xpos, ypos);
-		 return pos;
-  }
+//  public static Point spawn() {
+//	  Random random = new Random(); 
+//		 double xpos = random.nextInt(550);
+//		 double ypos = random.nextInt(550);
+//		 Point pos = new Point(xpos, ypos);
+//		 return pos;
+//  }
+  
+ 
   /**
    * 
    * @param brush

@@ -5,23 +5,14 @@ import java.util.Random;
 
 
 
-public class Apple extends Polygon implements ApplesInt {
+public class Banana extends Polygon {
   int count;
-  Color color;
   Random random = new Random();
 
-  public Apple(Point[] inShape, Point inPosition, double inRotation, int count) {
+  public Banana(Point[] inShape, Point inPosition, double inRotation) {
 	  super(inShape, inPosition, inRotation);
-	  this.count = count;
-	  this.color = Color.RED;
   }
-  public static Point spawn() {
-	  Random random = new Random(); 
-		 double xpos = random.nextInt(550);
-		 double ypos = random.nextInt(550);
-		 Point pos = new Point(xpos, ypos);
-		 return pos;
-  }
+ 
   
   /**
    * 
@@ -39,7 +30,7 @@ public class Apple extends Polygon implements ApplesInt {
 		xCoord[i] =  (int) apple[i].getX();
 		yCoord[i] = (int) apple[i].getY();
 	}
-	brush.setColor(Color.RED);
+	brush.setColor(Color.YELLOW);
 	brush.fillPolygon(xCoord, yCoord, apple.length);
   }
   

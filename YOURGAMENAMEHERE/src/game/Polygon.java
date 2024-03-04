@@ -105,24 +105,20 @@ class Polygon {
     return new Point(Math.abs(sum.x/(6*area)),Math.abs(sum.y/(6*area)));
   }
   
+  
+  /**
+   * checks to see if the current objects position intersects the object in the 
+   * parameters position.
+   * returns true if it does intersect, false if not.
+   * @param other
+   * @return boolean
+   */
   public boolean collides(Polygon other) {
 		 if (this.contains(other.position)) {
 			 return true;
 		 }
 		 return false;
   }
- public void newArray() {
-	 ArrayList<Point> arrayList = new ArrayList<Point>();
-	 for (Point p : shape) {
-		 arrayList.add(p);
-	 }
-	 Point[] newArray = new Point[72];
-	 for (int i = 0; i < arrayList.size(); i++) {
-		 newArray[i] = arrayList.get(i);
-		 shape = newArray;
-	 }
- }
-  
-  
+
 
 }
